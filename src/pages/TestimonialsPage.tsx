@@ -2,6 +2,14 @@ import React from 'react';
 import { Star, Quote, TrendingUp, Award, Users } from 'lucide-react';
 
 const TestimonialsPage = () => {
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
   const testimonials = [
     {
       name: 'Sarah Chen',
@@ -112,7 +120,7 @@ const TestimonialsPage = () => {
 
         {/* See All Button */}
         <div className="text-center mb-16">
-          <button className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-600 hover:text-white transition-colors">
+          <button onClick={scrollToBottom} className="border-2 border-pink-600 text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-pink-600 hover:text-white transition-colors">
             See all
           </button>
         </div>

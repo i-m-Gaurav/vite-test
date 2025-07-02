@@ -37,11 +37,13 @@ const Footer = () => {
     {
       title: 'Social',
       links: [
-        { name: 'Twitter', path: '#' },
-        { name: 'LinkedIn', path: '#' },
+        { name: 'Twitter', path: 'https://x.com/aseem_singhal' },
+        { name: 'LinkedIn', path: 'https://www.linkedin.com/in/singhalaseem/' },
         { name: 'Facebook', path: '#' },
+        { name: 'Instagram', path: '#' },
+        {name:"Youtube", path:'https://www.youtube.com/@aseemsinghal'},
         { name: 'GitHub', path: '#' },
-        { name: 'AngelList', path: '#' }
+        { name: 'AngelList', path: '#' },
       ]
     },
     {
@@ -55,6 +57,17 @@ const Footer = () => {
       ]
     }
   ];
+
+// Add this just before the return statement
+const socialLinks = footerSections.find(section => section.title === 'Social')?.links || [];
+
+const iconMap = {
+  Twitter: Twitter,
+  LinkedIn: Linkedin,
+  Facebook: Facebook,
+  Instagram: Instagram,
+  Youtube: Youtube
+};
 
   return (
     <footer className="bg-pink-600 text-white">
@@ -98,16 +111,24 @@ const Footer = () => {
             © 2025 XYZ. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            {[Twitter, Linkedin, Facebook, Instagram, Youtube].map((Icon, index) => (
-              <a
-                key={index}
-                href="#"
-                className="text-pink-100 hover:text-white transition-colors"
-              >
-                <Icon className="w-5 h-5" />
-              </a>
-            ))}
-          </div>
+  {socialLinks.map(({ name, path }, index) => {
+    const IconComponent = iconMap[name];
+    return (
+      IconComponent && (
+        <a
+          key={index}
+          href={path}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-pink-100 hover:text-white transition-colors"
+        >
+          <IconComponent className="w-5 h-5" />
+        </a>
+      )
+    );
+  })}
+</div>
+
         </div>
       </div>
     </footer>

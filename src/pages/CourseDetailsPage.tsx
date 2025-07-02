@@ -8,11 +8,393 @@ import {
 
 const CourseDetailsPage = () => {
   const { id } = useParams();
+
   const [activeTab, setActiveTab] = useState('overview');
   const [isWishlisted, setIsWishlisted] = useState(false);
 
-  // Mock course data - in real app, fetch based on id
-  const course = {
+const courseData = [
+  // Existing merged 9 courses (shown before)...
+
+  {
+    id: 1,
+    title: 'Groww Algo Mastery',
+    description: 'A complete guide to building and deploying algos for Groww’s trading ecosystem.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Trading',
+    level: 'Intermediate',
+    type: 'Live',
+    duration: '11 hr 25 mins',
+    lessons: 35,
+    rating: 4.7,
+    students: 180,
+    price: 7999,
+    reviews: 125,
+    originalPrice: null,
+    featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+      }],
+    instructor: {
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Groww', 'Algo Trading', 'Live'],
+    isNew: false,
+    isPopular: true,
+    lastUpdated: 'December 2024',
+    certificate: true,
+  },
+  {
+    id: 2,
+    title: 'Algo Trading with Python',
+    description: 'Master strategy creation, automation using Python, technical indicators, options & API integration.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Trading',
+    level: 'Advanced',
+    type: 'Live',
+    duration: '10 hr 2 mins',
+    lessons: 40,
+    rating: 4.8,
+    students: 3500,
+    price: 7999,
+    reviews: 1325,
+    originalPrice: null,
+    featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+      }],
+    instructor: {
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Python', 'Automation', 'API'],
+    isNew: false,
+    isPopular: true,
+    lastUpdated: 'December 2024',
+    certificate: true,
+  },
+  {
+    id: 3,
+    title: 'HFT Trading Using C++',
+    description: 'Deep dive into low-latency trading system design using C++.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Trading',
+    level: 'Advanced',
+    type: 'Live',
+    duration: '16 hr 3 mins',
+    lessons: 50,
+    rating: 4.6,
+    students: 210,
+    price: 49999,
+    reviews: 52,
+    originalPrice: null,
+    featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+      }],
+    instructor: {
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['HFT', 'C++', 'Low Latency'],
+    isNew: false,
+    isPopular: false,
+    lastUpdated: 'December 2024',
+    certificate: true,
+
+  },
+  {
+    id: 4,
+    title: 'Backtesting Using Python',
+    description: 'Learn how to simulate and validate trading strategies using real historical data. From loading data to evaluating performance, master the core skills to build your own backtester in Python.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Python',
+    level: 'Intermediate',
+    type: 'Recorded',
+    duration: '10 hr 25 mins',
+    lessons: 38,
+    rating: 4.7,
+    students: 2150,
+    price: 29999,
+    reviews: 1250,
+    originalPrice: 39999,
+    featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+      }],
+    instructor: {
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/6693652/pexels-photo-6693652.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Python', 'Backtesting', 'Strategy Evaluation', 'Historical Data'],
+    isNew: false,
+    isPopular: false,
+    lastUpdated: 'December 2024',
+    certificate: true,
+
+  },
+  {
+    id: 5,
+    title: 'Basics of Options',
+    description: 'A beginner-friendly introduction to call & put options, option greeks, and payoff structures. Understand the logic behind option pricing and strategies with practical Indian market examples.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Options',
+    level: 'Beginner',
+    type: 'Recorded',
+    duration: '4 hr 10 mins',
+    lessons: 22,
+    rating: 4.5,
+    students: 3200,
+    price: 3999,
+    reviews: 2480,
+    originalPrice: 5499,
+featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+      }],
+    instructor: {
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/4386374/pexels-photo-4386374.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Options', 'Greeks', 'Payoff Diagrams', 'Indian Markets'],
+    isNew: false,
+    isPopular: false,
+    lastUpdated: 'December 2024',
+    certificate: true,
+  },
+  {
+    id: 6,
+    title: 'Basics of Stock Market',
+    description: 'Demystify how the stock market works—from IPOs to indices and beyond. Ideal for beginners, this course simplifies concepts like equity, demat, brokers, and market behavior in the Indian context.',
+    aboutcourse: 'This hands-on course is designed to take you from options trading basics to building powerful strategies using Python. You’ll learn how to backtest trades using free tools, automate both option buying and selling strategies, and apply advanced logic to real market scenarios using indicators and support/resistance levels.',
+    category: 'Stock Market',
+    level: 'Beginner',
+    type: 'Recorded',
+    duration: '11 hr 25 mins',
+    lessons: 30,
+    rating: 4.6,
+    students: 3115,
+    price: 2999,
+    reviews: 2100,
+    originalPrice: 4499,
+     featuresLearn: [
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
+    ],
+    coursefeatures: [
+'Certificate of completion',
+'Direct instructor support',
+'Lifetime access to all course content',
+'Access to private trading community',
+'Regular updates with new strategies and content'
+    ],
+    curriculum: [
+      {
+        section: 'Introduction to Option Trading',
+        lessons: [
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+
+      }],
+    instructor:{
+      name: 'Aseem Singhal',
+      title: 'Senior Director at ModernAI',
+      avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
+      experience: '15+ years',
+      students: '12,000+',
+      courses: 8,
+      rating: 4.9
+    },
+    image: 'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Options', 'Trading Python', 'Backtesting Strategy', 'Automation', 'Risk Management'],
+    isNew: false,
+    isPopular: false,
+    lastUpdated: 'December 2024',
+    certificate: true,
+
+  }
+];
+
+const courseId = parseInt(id); // convert string to number
+const course = courseData.find((c) => c.id === courseId);
+
+if (!course) {
+  return <div className="text-center py-20 text-gray-600">Course not found.</div>;
+}
+
+  const coursedetail = {
     id: parseInt(id || '1'),
     title: 'Complete Algorithmic Trading Masterclass',
     subtitle: 'Master algorithmic trading with Python, build trading bots, and learn advanced risk management strategies',
@@ -42,24 +424,29 @@ const CourseDetailsPage = () => {
     certificate: true,
     tags: ['Python', 'Trading APIs', 'Backtesting', 'Live Trading', 'Risk Management'],
     features: [
-      '45 comprehensive video lessons',
-      'Downloadable resources and code',
-      'Real-world trading projects',
-      'Lifetime access to course content',
-      'Certificate of completion',
-      'Direct instructor support',
-      'Access to private community',
-      'Regular content updates'
+      'Basics of Options and Option Greeks',
+'Backtesting using free tools',
+'Python fundamentals and login data handling',
+'Option selling and buying strategies using Python',
+'Strategy development with indicators and support/resistance',
+'Advanced Python-based trading strategies',
     ],
+    
     curriculum: [
       {
-        section: 'Introduction to Algorithmic Trading',
+        section: 'Introduction to Option Trading',
         lessons: [
-          { title: 'What is Algorithmic Trading?', duration: '12:34', preview: true },
-          { title: 'Market Structure and Data', duration: '18:22', preview: false },
-          { title: 'Setting Up Your Environment', duration: '15:45', preview: true },
-          { title: 'Python Basics for Trading', duration: '25:18', preview: false }
-        ]
+  { title: 'Basics of Options', duration: '12:34', preview: true },
+  { title: 'Options Greeks', duration: '18:22', preview: false },
+  { title: 'Backtesting using Free Tools', duration: '15:45', preview: true },
+  { title: 'Python Basics + Login Data', duration: '25:18', preview: false },
+  { title: 'Option Selling Strategies (Python)', duration: '12:34', preview: true },
+  { title: 'Option Buying Strategies (Python)', duration: '18:22', preview: false },
+  { title: 'Indicator Strategies (Python)', duration: '15:45', preview: true },
+  { title: 'Support/Resistance Strategies (Python)', duration: '25:18', preview: false },
+  { title: 'Advanced Strategies (Python)', duration: '12:34', preview: true }
+]
+
       },
       {
         section: 'Data Analysis and Visualization',
@@ -143,13 +530,13 @@ const CourseDetailsPage = () => {
     <div className="space-y-8">
       <div>
         <h3 className="text-xl font-bold text-gray-900 mb-4">About This Course</h3>
-        <p className="text-gray-600 leading-relaxed mb-6">{course.description}</p>
+        <p className="text-gray-600 leading-relaxed mb-6">{course.aboutcourse}</p>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h4 className="font-semibold text-gray-900 mb-3">What You'll Learn</h4>
             <ul className="space-y-2">
-              {course.features.slice(0, 4).map((feature, index) => (
+              {course.featuresLearn.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-600">{feature}</span>
@@ -160,7 +547,7 @@ const CourseDetailsPage = () => {
           <div>
             <h4 className="font-semibold text-gray-900 mb-3">Course Features</h4>
             <ul className="space-y-2">
-              {course.features.slice(4).map((feature, index) => (
+              {course.coursefeatures.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
                   <CheckCircle className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" />
                   <span className="text-gray-600">{feature}</span>
@@ -280,13 +667,13 @@ const CourseDetailsPage = () => {
                 />
               ))}
             </div>
-            <p className="text-gray-600">{course.review.length} reviews</p>
+            <p className="text-gray-600">{coursedetail.review.length} reviews</p>
           </div>
         </div>
       </div>
 
       <div className="space-y-6">
-        {course.review.map((r, index) => (
+        {coursedetail.review.map((r, index) => (
           <div key={index} className="border-b border-gray-200 pb-6 last:border-b-0">
             <div className="flex items-start gap-4">
               <img
@@ -344,7 +731,7 @@ const CourseDetailsPage = () => {
               </div>
 
               <h1 className="text-3xl md:text-4xl font-bold mb-4">{course.title}</h1>
-              <p className="text-xl text-gray-300 mb-6">{course.subtitle}</p>
+              <p className="text-xl text-gray-300 mb-6">{course.description}</p>
 
               <div className="flex flex-wrap items-center gap-6 text-sm">
                 <div className="flex items-center gap-1">
@@ -398,16 +785,15 @@ const CourseDetailsPage = () => {
                 <div className="p-6">
                   <div className="text-center mb-6">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                      <span className="text-3xl font-bold text-pink-600">${course.price}</span>
+                      <span className="text-3xl font-bold text-pink-600">₹{course.price}</span>
                       {course.originalPrice && (
-                        <span className="text-lg text-gray-400 line-through">${course.originalPrice}</span>
+                        <span className="text-lg text-gray-400 line-through">₹{course.originalPrice}</span>
                       )}
-                    </div>
-                    {course.originalPrice && (
+                    </div>  
+                      {course.originalPrice && (
                       <p className="text-sm text-green-600 font-medium">
                         {Math.round((1 - course.price / course.originalPrice) * 100)}% off limited time!
-                      </p>
-                    )}
+                      </p>)}
                   </div>
 
                   <div className="space-y-3 mb-6">

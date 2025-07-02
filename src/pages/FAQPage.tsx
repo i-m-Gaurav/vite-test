@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const FAQPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -103,9 +104,13 @@ const FAQPage = () => {
           <p className="mb-6 opacity-90">
             Can't find the answer you're looking for? Please chat with our friendly team.
           </p>
+          <Link
+                        to='/contact'
+                      >
           <button className="bg-white text-pink-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
             Contact Support
           </button>
+          </Link>
         </div>
       </div>
     </div>

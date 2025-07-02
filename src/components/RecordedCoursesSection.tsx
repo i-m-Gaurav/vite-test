@@ -3,6 +3,7 @@ import { Play, Clock, Star, Users, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const RecordedCoursesSection = () => {
+
   const recordedCourses = [
   {
     id: 4,
@@ -48,6 +49,7 @@ const RecordedCoursesSection = () => {
     duration: '11 hr 25 mins',
     lessons: 30,
     rating: 4.6,
+    reviews: 2100,
     students: 3115,
     price: '₹2,999',
     originalPrice: '₹4,499',

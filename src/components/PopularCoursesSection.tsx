@@ -54,7 +54,7 @@ const PopularCoursesSection = () => {
         <div className="mb-16">
           <p className="text-pink-600 font-semibold mb-2">Explore Programs</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Most PopuTradingLIVE SESSIONS
+             Our Most Popular Classes - LIVE SESSIONS
           </h2>
           <p className="text-gray-600">
 Join thousands of learners mastering algorithmic trading with real-world, hands-on experience.

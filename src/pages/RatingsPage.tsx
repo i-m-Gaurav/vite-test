@@ -5,10 +5,6 @@ import fyerIcon from "./../assets/images/trusticon2.svg"
 import deltaIcon from "./../assets/images/trusticon3.svg"
 import dhaIcon from "./../assets/images/trusticon4.svg"
 
-
-
-
-
 const platforms = [
   {
     name: "Groww",
