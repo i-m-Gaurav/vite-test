@@ -4,49 +4,49 @@ import { Link } from 'react-router-dom';
 
 const PopularCoursesSection = () => {
   const courses = [
-    {
-      id: 1,
-      title: 'Figma UI UX Design..',
-      category: 'Trading',
-      description: 'The course dustectibus es explicabo tending content, and insights.',
-      duration: '8hr 15 min',
-      rating: 4.3,
-      reviews: 16325,
-      price: '$17.84',
-      instructor: 'Jane Cooper',
-      enrollmentYear: '2021 Enrolled',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Figma', 'UI', 'UX']
-    },
-    {
-      id: 2,
-      title: 'Learn With Joen',
-      category: 'Trading',
-      description: 'The Instructor consequat knowledge, expert instructing and learning',
-      duration: '8hr 5 min',
-      rating: 3.9,
-      reviews: 9635,
-      price: '$8.99',
-      instructor: 'Jenny Wilson',
-      enrollmentYear: '2021 Enrolled',
-      image: 'https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Trading', 'Finance']
-    },
-    {
-      id: 3,
-      title: 'Building User Interface..',
-      category: 'Trading',
-      description: 'Proficiently templating practice trading strategies, learned a lot sit.',
-      duration: '8hr 20 min',
-      rating: 4.2,
-      reviews: 12477,
-      price: '$11.70',
-      instructor: 'Esther Howard',
-      enrollmentYear: '2021 Enrolled',
-      image: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['Interface', 'Design']
-    }
-  ];
+  {
+    id: 1,
+    title: 'Groww Algo Mastery',
+    category: 'Trading',
+    description: 'A complete guide to building and deploying algos for Groww’s trading ecosystem.',
+    duration: '11 hr 25 mins',
+    rating: 4.7,
+    reviews: 125,
+    price: '₹7,999',
+    instructor: 'Aseem Singhal',
+    enrollmentYear: '180 Enrolled',
+    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Groww', 'Algo Trading', 'Live']
+  },
+  {
+    id: 2,
+    title: 'Algo Trading with Python',
+    category: 'Trading',
+    description: 'Master strategy creation, automation using Python, technical indicators, options & API integration.',
+    duration: '10 hr 2 mins',
+    rating: 4.8,
+    reviews: 1325,
+    price: '₹7,999',
+    instructor: 'Aseem Singhal',
+    enrollmentYear: '3500+ Enrolled',
+    image: 'https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['Python', 'Automation', 'API']
+  },
+  {
+    id: 3,
+    title: 'HFT Trading Using C++',
+    category: 'Trading',
+    description: 'Deep dive into low-latency trading system design using C++.',
+    duration: '16 hr 3 mins',
+    rating: 4.6,
+    reviews: 52,
+    price: '₹49,999',
+    instructor: 'Aseem Singhal',
+    enrollmentYear: '210 Enrolled',
+    image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=600',
+    tags: ['HFT', 'C++', 'Low Latency']
+  }
+];
 
   return (
     <section className="py-20 bg-gray-50">
@@ -54,10 +54,10 @@ const PopularCoursesSection = () => {
         <div className="mb-16">
           <p className="text-pink-600 font-semibold mb-2">Explore Programs</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Our Most Popular Class
+            Our Most PopuTradingLIVE SESSIONS
           </h2>
           <p className="text-gray-600">
-            Let's join our famous class, the knowledge provided will definitely be useful for you.
+Join thousands of learners mastering algorithmic trading with real-world, hands-on experience.
           </p>
         </div>
 

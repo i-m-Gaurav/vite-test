@@ -1,67 +1,99 @@
 import React from 'react';
-import { Award, Briefcase, GraduationCap, TrendingUp, BookOpen, Users } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, TrendingUp, BookOpen} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const StorySection = () => {
-  const timeline = [
-    {
-      year: '1998',
-      title: 'Machine Learning Researcher at XYZ Lab',
-      icon: GraduationCap,
-      description: 'Started my journey in AI and machine learning research, focusing on pattern recognition and data analysis.'
-    },
-    {
-      year: '2005',
-      title: 'Founder Data Science Company',
-      icon: Briefcase,
-      description: 'Founded my first company specializing in data science solutions for financial institutions.'
-    },
-    {
-      year: '2015',
-      title: 'Teaching at AI Center',
-      icon: Award,
-      description: 'Began teaching advanced AI and trading concepts, sharing knowledge with the next generation of traders.'
-    },
-    {
-      year: '2020',
-      title: 'PhD on neural networks',
-      icon: GraduationCap,
-      description: 'Completed doctoral research on neural network applications in algorithmic trading systems.'
-    },
-    {
-      year: 'Now',
-      title: 'Senior Director at ModernAI',
-      icon: TrendingUp,
-      description: 'Currently leading AI initiatives and developing cutting-edge trading algorithms at ModernAI.'
-    }
-  ];
+
+const timeline = [
+  {
+    year: '2009-11',
+    title: 'Quant Analyst – Deutsche Bank, Singapore',
+    icon: Briefcase,
+    description: 'Worked on global risk and analytics systems; awarded 3 RARE Awards for automation and knowledge innovation.'
+  },
+  {
+    year: '2018-20',
+    title: 'Algo Fund Manager – Rain Technologies',
+    icon: TrendingUp,
+    description: 'Ran a fully automated trading fund focused on intraday and positional strategies across Indian markets.'
+  },
+  {
+    year: '2024-Present',
+    title: 'Content Creator – Coursera',
+    icon: Award,
+    description: 'Developed global finance-tech courses like "Generative AI for Trading" and "Python Automation for Traders."'
+  },
+  {
+    year: '2024-Present',
+    title: 'Visiting Faculty – Chitkara University',
+    icon: GraduationCap,
+    description: 'Delivered the "Introduction to Algorithmic Trading" course, combining hedge fund strategies with real-world case studies.'
+  },
+  {
+    year: '2022-Present',
+    title: 'Faculty – The Future University',
+    icon: GraduationCap,
+    description: 'Taught 3,000+ students Python-based trading automation, backtesting, and risk management through hands-on sessions.'
+  },
+  {
+    year: '2022-Present',
+    title: 'Content Creator – Groww',
+    icon: Award,
+    description: 'Created educational content and live market analysis for Groww’s 75K+ subscriber channel, simplifying equity and options trading.'
+  },
+  {
+    year: '2024-Present',
+    title: 'Founder – Unfluke',
+    icon: Briefcase,
+    description: 'Built an AI-powered platform to backtest, scan, and monetize trading strategies for retail and pro traders.'
+  }
+];
 
   const education = [
-    {
-      degree: 'PhD in Neural Networks',
-      institution: 'Stanford University',
-      year: '2020',
-      description: 'Specialized in deep learning applications for financial markets and algorithmic trading systems.'
-    },
-    {
-      degree: 'Master of Science in Computer Science',
-      institution: 'MIT',
-      year: '2002',
-      description: 'Focus on artificial intelligence, machine learning, and quantitative finance.'
-    },
-    {
-      degree: 'Bachelor of Science in Mathematics',
-      institution: 'Harvard University',
-      year: '1998',
-      description: 'Graduated Summa Cum Laude with concentration in Applied Mathematics and Statistics.'
-    }
-  ];
+  {
+    degree: 'Executive MBA (Ongoing)',
+    institution: 'IIM Kozhikode',
+    year: '2023-25',
+    description: 'Focused on scaling fintech and behavioral finance.'
+  },
+  {
+    degree: 'MBA (Dean\'s List)',
+    institution: 'IE Business School + Kellogg School of Management',
+    year: '2012',
+    description: 'Double concentration in Finance & Strategy.'
+  },
+  {
+    degree: 'Masters in Financial Engineering',
+    institution: 'WorldQuant University',
+    year: '2021-23',
+    description: 'Specialized in quantitative modeling, risk management, and derivatives.'
+  },
+  {
+    degree: 'PG Diploma in Finance',
+    institution: 'BITS Pilani',
+    year: '2023-24',
+    description: 'Deep dive into valuation, portfolio theory, and corporate finance.'
+  },
+  {
+    degree: 'B.Tech in Computer Engineering',
+    institution: 'Nanyang Technological University, Singapore',
+    year: '2005-09',
+    description: 'Dean’s List; specialized in systems engineering and data analytics.'
+  },
+  {
+    degree: 'Certifications',
+    institution: 'NISM, FRM Level 1, Python for Trading',
+    year: '—',
+    description: 'Validated core expertise in markets, financial risk, and trading automation.'
+  }
+];
+
 
   const achievements = [
-    { number: '15+', label: 'Years Experience' },
-    { number: '10K+', label: 'Students Taught' },
-    { number: '50+', label: 'Published Papers' },
-    { number: '5', label: 'Awards Won' }
+    { number: '8+', label: 'Years Experience' },
+    { number: '3000+', label: 'Students Taught' },
+    { number: '51', label: 'Trading Strategies Authored' },
+    { number: '5', label: 'Major Courses Released' }
   ];
 
   return (
@@ -69,11 +101,10 @@ const StorySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-            Hello, I'm <span className="text-pink-600">Joen Callion</span>
+            Hello, I'm <span className="text-pink-600">Aseem Singhal</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            A passionate educator and researcher dedicated to making algorithmic trading 
-            and AI accessible to learners worldwide.
+            A passionate educator, algo trader, and fintech entrepreneur - on a mission to make algorithmic trading accessible, data-driven, and profitable for everyone.
           </p>
         </div>
 
@@ -85,14 +116,11 @@ const StorySection = () => {
               <h3 className="text-2xl font-bold text-pink-600 mb-6">My Story</h3>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  My story is one fueled by a deep passion for unraveling the mysteries of AI, leading me to contribute to groundbreaking research and advancements in the industry.
-                </p>
+                  My journey began with a love for data and a curiosity about the markets. From Deutsche Bank to building my own fintech venture, I’ve spent the last 8+ years at the intersection of finance, technology, and education.                </p>
                 <p>
-                  Throughout my career, I've been at the forefront of shaping the future of technology, blending theoretical knowledge with practical insights. I am committed to making AI and machine learning accessible to learners at all levels, demystifying complex concepts in an engaging and collaborative learning environment.
-                </p>
+                  I founded Unfluke to help retail and professional traders move beyond guesswork and flukes—and instead build strategies backed by real data, backtesting, and community insights. As a mentor to 3000+ students and a contributor to the largest broker in India, my focus is on clarity, practicality, and real-world application.                </p>
                 <p>
-                  Beyond the classroom, I'm a thought leader, continually pushing the boundaries of AI research. My dedication to ethical AI development ensures that my research sets the stage for responsible and innovative growth.
-                </p>
+                  My teaching blends years of industry experience with cutting-edge tools—Python, C++, strategy logic, and AI-powered analytics. I believe learning should be hands-on, not theoretical.                </p>
               </div>
             </div>
 

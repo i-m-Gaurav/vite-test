@@ -3,18 +3,20 @@ import { CheckCircle } from 'lucide-react';
 
 const TrustSection = () => {
   const leftFeatures = [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    'Nulla faucibus magna ut risus rutrum.',
-    'Quisque molestie elit vel tellus tincidunt.',
-    'Fusce fringilla ante viverra convallis.',
-    'Maecorb rutrum augue sit amet sagittis. sit nisl consequat pede sollicitudin et amet eudt.'
+    'Learn from a real algorithmic trader with 8+ years of industry experience',
+'3,000+ students trained in Python, trading strategies, and automation',
+'Backed by real-world tools like Unfluke for testing and monetizing ideas',
+'Content featured on platforms like Groww, Future University, and Coursera',
+'Get practical, hands-on learning — not just theory or fluff'
+
   ];
 
   const rightFeatures = [
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    'Sed hendrerit mauris sed tellus auctor sed.',
-    'Pellentesque dui neque ut altet tellus tincidunt.',
-    'Fusce interdum nisl rhoncus, euismod erat ut tortor.'
+    'All strategies are backed by data, not guesswork',
+'Industry-certified (NISM, FRM L1, CFA L1) and globally educated',
+'Transparent results, real case studies, and verified tools',
+'We don’t just teach — we help you build confidence to trade smarter',
+
   ];
 
   return (
@@ -47,8 +49,8 @@ const TrustSection = () => {
                   className="w-12 h-12 rounded-full object-cover"
                 />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Joan Kowalski, AMT</h4>
-                  <p className="text-sm text-gray-600">St Claire Catholic School</p>
+                  <h4 className="font-semibold text-gray-900">Aseem Singhal</h4>
+                  <p className="text-sm text-gray-600">Founder, Unfluke | Ex-Deutsche Bank | Author of 51 Trading Strategies</p>
                 </div>
               </div>
             </div>

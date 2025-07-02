@@ -17,7 +17,7 @@ const TestimonialsPage = () => {
       role: 'Financial Analyst — Options Trader',
       avatar: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=100',
       rating: 5,
-      comment: "The course content is incredibly detailed and practical. Joen's teaching style makes even the most complex trading strategies easy to understand. I've already implemented several strategies successfully.",
+      comment: "The course content is incredibly detailed and practical. Aseem's teaching style makes even the most complex trading strategies easy to understand. I've already implemented several strategies successfully.",
       achievement: 'Achievement: Mastered systematic trading',
       transformation: 'Transformation: From confused beginner → Confident systematic trader'
     }

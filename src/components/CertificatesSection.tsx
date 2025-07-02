@@ -51,7 +51,7 @@ const CertificatesSection = () => {
                     <div className="text-left">
                       <div className="w-24 h-0.5 bg-gray-300 mb-2"></div>
                       <p className="text-sm text-gray-600">Instructor</p>
-                      <p className="font-semibold text-gray-900">Joen Callion</p>
+                      <p className="font-semibold text-gray-900">Aseem Singhal</p>
                     </div>
                     <div className="text-center">
                       <p className="text-sm text-gray-600 mb-1">Completion Date</p>

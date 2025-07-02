@@ -20,6 +20,7 @@ const Navigation = () => {
     { name: 'Ratings', path: '/ratings' },
     { name: 'Testimonials', path: '/testimonials' },
     { name: 'FAQ', path: '/faq' },
+    { name: 'Contact', path: '/contact' },
   ];
 
   return (
@@ -31,9 +32,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">J</span>
+              <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="text-xl font-bold text-gray-900">Joen Callion</span>
+            <span className="text-xl font-bold text-gray-900">Aseem Singhal</span>
           </Link>
 
           {/* Search Bar - Desktop */}

@@ -63,10 +63,10 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                <span className="text-pink-600 font-bold">J</span>
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <span className="text-pink-600 font-bold">A</span>
               </div>
-              <span className="text-xl font-bold">Joen Callion</span>
+              <span className="text-xl font-bold text-nowrap">Aseem Singhal</span>
             </Link>
             <p className="text-pink-100 mb-6 max-w-md text-sm">
               Top learning experiences that create more talent in the world.

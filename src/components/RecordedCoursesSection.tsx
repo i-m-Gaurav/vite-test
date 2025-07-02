@@ -4,55 +4,60 @@ import { Link } from 'react-router-dom';
 
 const RecordedCoursesSection = () => {
   const recordedCourses = [
-    {
-      id: 4,
-      title: 'Complete Algorithmic Trading Masterclass',
-      description: 'Master the fundamentals of algorithmic trading with Python, build your own trading bots, and learn risk management strategies.',
-      duration: '12hrs 30min',
-      lessons: 45,
-      rating: 4.8,
-      students: 3420,
-      price: '$89.99',
-      originalPrice: '$149.99',
-      level: 'Intermediate',
-      thumbnail: 'https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=600',
-      topics: ['Python', 'Trading Algorithms', 'Risk Management', 'Backtesting'],
-      instructor: 'Joen Callion',
-      lastUpdated: 'December 2024'
-    },
-    {
-      id: 5,
-      title: 'Technical Analysis for Beginners',
-      description: 'Learn to read charts, identify patterns, and make informed trading decisions using technical analysis tools and indicators.',
-      duration: '8hrs 45min',
-      lessons: 32,
-      rating: 4.6,
-      students: 5680,
-      price: '$59.99',
-      originalPrice: '$99.99',
-      level: 'Beginner',
+  {
+    id: 4,
+    title: 'Backtesting Using Python',
+    description:
+      'Learn how to simulate and validate trading strategies using real historical data. From loading data to evaluating performance, master the core skills to build your own backtester in Python.',
+    duration: '10 hr 25 mins',
+    lessons: 38,
+    rating: 4.7,
+    reviews: 1250,
+    students: 2150,
+    price: '₹29,999',
+    originalPrice: '₹39,999',
+    level: 'Intermediate',
+    thumbnail: 'https://images.pexels.com/photos/6693652/pexels-photo-6693652.jpeg?auto=compress&cs=tinysrgb&w=600',
+    topics: ['Python', 'Backtesting', 'Strategy Evaluation', 'Historical Data'],
+    instructor: 'Aseem Singhal',
+    lastUpdated: 'March 2025'
+  },
+  {
+    id: 5,
+    title: 'Basics of Options',
+    description:
+      'A beginner-friendly introduction to call & put options, option greeks, and payoff structures. Understand the logic behind option pricing and strategies with practical Indian market examples.',
+    duration: '4 hr 10 mins',
+    lessons: 22,
+    rating: 4.5,
+    reviews: 2480,
+    students: 3200,
+    price: '₹3,999',
+    originalPrice: '₹5,499',
+    level: 'Beginner',
+    thumbnail: 'https://images.pexels.com/photos/4386374/pexels-photo-4386374.jpeg?auto=compress&cs=tinysrgb&w=600',
+    topics: ['Options', 'Greeks', 'Payoff Diagrams', 'Indian Markets'],
+    instructor: 'Aseem Singhal',
+    lastUpdated: 'February 2025'
+  },
+  {
+    id: 6,
+    title: 'Basics of Stock Market',
+    description:
+      'Demystify how the stock market works—from IPOs to indices and beyond. Ideal for beginners, this course simplifies concepts like equity, demat, brokers, and market behavior in the Indian context.',
+    duration: '11 hr 25 mins',
+    lessons: 30,
+    rating: 4.6,
+    students: 3115,
+    price: '₹2,999',
+    originalPrice: '₹4,499',
+    level: 'Beginner',
       thumbnail: 'https://images.pexels.com/photos/186461/pexels-photo-186461.jpeg?auto=compress&cs=tinysrgb&w=600',
-      topics: ['Chart Analysis', 'Technical Indicators', 'Pattern Recognition', 'Market Psychology'],
-      instructor: 'Joen Callion',
-      lastUpdated: 'November 2024'
-    },
-    {
-      id: 6,
-      title: 'Advanced Options Trading Strategies',
-      description: 'Dive deep into sophisticated options strategies, Greeks, volatility trading, and portfolio hedging techniques.',
-      duration: '15hrs 20min',
-      lessons: 58,
-      rating: 4.9,
-      students: 2140,
-      price: '$129.99',
-      originalPrice: '$199.99',
-      level: 'Advanced',
-      thumbnail: 'https://images.pexels.com/photos/159888/pexels-photo-159888.jpeg?auto=compress&cs=tinysrgb&w=600',
-      topics: ['Options Greeks', 'Volatility Trading', 'Portfolio Hedging', 'Complex Strategies'],
-      instructor: 'Joen Callion',
-      lastUpdated: 'January 2025'
-    }
-  ];
+    topics: ['Stock Market', 'IPO', 'Demat', 'Equity', 'India Market'],
+    instructor: 'Aseem Singhal',
+    lastUpdated: 'January 2025'
+  }
+];
 
   const features = [
     { icon: Play, text: 'On-demand video content' },
@@ -67,11 +72,10 @@ const RecordedCoursesSection = () => {
         <div className="text-center mb-16">
           <p className="text-pink-600 font-semibold mb-2">Self-Paced Learning</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            My Recorded Courses
+            Our Hero Programs – RECORDED SESSIONS
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Access comprehensive trading education at your own pace. Each course includes video lessons, 
-            practical exercises, and lifetime access to updates.
+            Join thousands of learners mastering algorithmic trading with real-world, hands-on experience.
           </p>
         </div>
 
@@ -139,13 +143,14 @@ const RecordedCoursesSection = () => {
 
                 <div className="flex items-center gap-2 mb-4">
                   <div className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current mb-[2px]" />
                     <span className="text-sm font-medium text-gray-900">{course.rating}</span>
+                    <span className="text-sm text-gray-600">({course.reviews})</span>
                   </div>
                   <span className="text-gray-400">•</span>
                   <div className="flex items-center gap-1">
                     <Users className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-600">{course.students.toLocaleString()} students</span>
+                    <span className="text-sm text-gray-600">{course.students.toLocaleString()}+ students</span>
                   </div>
                 </div>
 

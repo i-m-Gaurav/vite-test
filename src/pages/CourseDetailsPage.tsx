@@ -18,7 +18,7 @@ const CourseDetailsPage = () => {
     subtitle: 'Master algorithmic trading with Python, build trading bots, and learn advanced risk management strategies',
     description: 'This comprehensive course will take you from beginner to advanced algorithmic trader. You\'ll learn Python programming for finance, develop your own trading algorithms, implement risk management strategies, and build automated trading systems.',
     instructor: {
-      name: 'Joen Callion',
+      name: 'Aseem Singhal',
       title: 'Senior Director at ModernAI',
       avatar: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100',
       experience: '15+ years',
@@ -113,7 +113,7 @@ const CourseDetailsPage = () => {
         avatar: 'https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=100',
         rating: 5,
         date: '2 weeks ago',
-        comment: 'Excellent course! Joen explains complex concepts clearly and the hands-on projects really helped me understand algorithmic trading. Already implementing strategies from the course.'
+        comment: 'Excellent course! Aseem explains complex concepts clearly and the hands-on projects really helped me understand algorithmic trading. Already implementing strategies from the course.'
       },
       {
         name: 'Michael Rodriguez',
@@ -257,7 +257,7 @@ const CourseDetailsPage = () => {
           </div>
           
           <p className="text-gray-600 leading-relaxed">
-            Joen is a renowned expert in algorithmic trading and artificial intelligence with over 15 years of experience in the financial technology sector. He holds a PhD in Neural Networks and has been at the forefront of developing cutting-edge trading algorithms for top-tier financial institutions.
+            Aseem is a renowned expert in algorithmic trading and artificial intelligence with over 15 years of experience in the financial technology sector. He holds a PhD in Neural Networks and has been at the forefront of developing cutting-edge trading algorithms for top-tier financial institutions.
           </p>
         </div>
       </div>

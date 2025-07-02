@@ -6,7 +6,7 @@ const ServicesSection = () => {
     {
       icon: TrendingUp,
       title: 'Learn Algo Trading',
-      description: 'Gain the skills to develop, and execute algorithmic trading strategies.',
+      description: 'Master the skills to design, test, and deploy algorithmic trading strategies.',
       buttonText: 'Learn More',
       bgColor: 'bg-pink-600',
       textColor: 'text-white'
@@ -14,7 +14,7 @@ const ServicesSection = () => {
     {
       icon: BookOpen,
       title: 'Explore My Books',
-      description: 'AI Trading Strategies education focused on Algorithm trading',
+      description: 'Dive into actionable guides on smart market strategies.',
       buttonText: 'Learn More',
       bgColor: 'bg-blue-50',
       textColor: 'text-gray-900'
@@ -22,7 +22,7 @@ const ServicesSection = () => {
     {
       icon: Wrench,
       title: 'Try My Tools',
-      description: 'Uniflake Platform SaaS testing Strategy marketplace, Al-driven insights.',
+      description: 'Access cutting-edge backtesting tools on the Unfluke platform - powered by AI, built for traders.',
       buttonText: 'Learn More',
       bgColor: 'bg-gray-50',
       textColor: 'text-gray-900'
@@ -35,7 +35,7 @@ const ServicesSection = () => {
         <div className="text-center mb-16">
           <p className="text-pink-600 font-semibold mb-2">Our Services</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Fostering a playful & engaging learning environment
+            Fostering a practical & engaging learning experience
           </h2>
         </div>
 
@@ -82,3 +82,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+
