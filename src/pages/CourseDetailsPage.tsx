@@ -387,7 +387,7 @@ featuresLearn: [
   }
 ];
 
-const courseId = parseInt(id); // convert string to number
+const courseId = parseInt(id || '1'); // convert string to number
 const course = courseData.find((c) => c.id === courseId);
 
 if (!course) {

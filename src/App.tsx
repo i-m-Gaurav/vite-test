@@ -10,10 +10,13 @@ import EnrollmentPage from './pages/EnrollmentPage';
 import NewsletterPage from './pages/NewsletterPage';
 import TestimonialsPage from './pages/TestimonialsPage';
 import FAQPage from './pages/FAQPage';
+import ContactPage from './pages/ContactPage';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop/>
       <div className="min-h-screen bg-white">
         <Navigation />
         <main>
@@ -26,6 +29,7 @@ function App() {
             <Route path="/newsletter" element={<NewsletterPage />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />
